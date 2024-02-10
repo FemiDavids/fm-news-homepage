@@ -14,14 +14,19 @@
 
     <title>Frontend Mentor | News homepage</title>
 
+    <!-- CSS STYLING -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link />
+
+    <script defer src="/script.js"></script>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
-        <div class="logo">
-          <img src="/assets/images/logo.svg" />
-        </div>
+        <img class="logo" src="/assets/images/logo.svg" />
         <nav class="main-nav">
           <ul>
             <li><a href="#">Home</a></li>
@@ -53,18 +58,23 @@
                   the power of the platforms back into the hands of the people.
                   But is it really fulfilling its promise?
                 </p>
-                <a>Read more</a>
+                <a class="cta" href="#">Read more</a>
               </div>
             </div>
           </div>
           <aside class="side-bar">
             <h2>New</h2>
             <div>
-              Hydrogen VS Electric Cars Will hydrogen-fueled cars ever catch up
-              to EVs? The Downsides of AI Artistry What are the possible adverse
-              effects of on-demand AI image generation? Is VC Funding Drying Up?
-              Private funding by VC firms is down 50% YOY. We take a look at
-              what that means.
+              <div class="articles">
+                <div class="article-card">
+                  <h3>Hydrogen VS Electric Cars</h3>
+                  <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+                </div>
+                The Downsides of AI Artistry What are the possible adverse
+                effects of on-demand AI image generation? Is VC Funding Drying
+                Up? Private funding by VC firms is down 50% YOY. We take a look
+                at what that means.
+              </div>
             </div>
           </aside>
         </div>

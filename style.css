@@ -1,27 +1,142 @@
 :root {
+  /* Primary Colors */
+  --clr-soft-orange: hsl(35, 77%, 62%);
+  --clr-soft-red: hsl(5, 85%, 63%);
 
-  
-  ### Primary
-  
-  - Soft orange: hsl(35, 77%, 62%)
-  - Soft red: hsl(5, 85%, 63%)
-  
-  ### Neutral
-  
-  Off-white: hsl(36, 100%, 99%)
-  Grayish blue: hsl(233, 8%, 79%)
-  Dark grayish blue: hsl(236, 13%, 42%)
-  Very dark blue: hsl(240, 100%, 5%)
-  
-  ## Typography
-  
-  ### Body Copy
-  
-  - Font size (paragraph): 15px
-  
-  ### Font
-  
-  - Family: [Inter](https://fonts.google.com/specimen/Inter)
-  - Weights: 400, 700, 800
+  /* Neutral */
+
+  --clr-off-white: hsl(36, 100%, 99%);
+  --clr-grayish-blue: hsl(233, 8%, 79%);
+  --clr-dark-grayish-blue: hsl(236, 13%, 42%);
+  --clr-very-dark-blue: hsl(240, 100%, 5%);
+
+  /* Typography  */
+  --ff-primary: "Inter", sans-serif;
+
+  --fs-12: 1.2rem;
+  --fs-14: 1.4rem;
+  --fs-16: 1.6rem;
+  --fs-18: 1.8rem;
+  --fs-20: 2rem;
+  --fs-24: 2.4rem;
+  --fs-32: 3.2rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  /* 10px of 16px = 62.5% */
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 9.6rem 0 0 0;
+  height: fit-content;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 4rem;
+}
+
+.header ul {
+  list-style: none;
+
+  flex: 1;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.header li {
+  display: inline-block;
+}
+
+.section-hero {
+  padding: 5.6rem 0;
+}
+
+.section-hero .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 2.8rem;
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.hero-main__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-main__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-main__content-title {
+  font-size: 5.2rem;
+  font-weight: var(--fw-extra-bold);
+  line-height: 1;
+}
+
+.hero-main__content-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cta {
+  width: fit-content;
+  padding: 1.2rem 3.2rem;
+  background-color: var(--clr-soft-red);
+  color: var(--clr-off-white);
+  text-transform: uppercase;
+  font-size: var(--fs-14);
+  font-weight: var(--fw-regular);
+  letter-spacing: 5px;
+}
+
+.side-bar {
+  background-color: var(--clr-very-dark-blue);
+  color: var(--clr-off-white);
+  padding: 3.2rem 2.4rem;
+}
