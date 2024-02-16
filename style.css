@@ -50,6 +50,7 @@ body {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -85,6 +86,17 @@ a {
   display: inline-block;
 }
 
+.main-nav a:link,
+.main-nav a:visited {
+  color: var(--clr-dark-grayish-blue);
+  cursor: pointer;
+}
+
+.main-nav a:hover,
+.main-nav a:active {
+  color: var(--clr-soft-red);
+}
+
 .section-hero {
   padding: 5.6rem 0;
 }
@@ -117,6 +129,7 @@ a {
   font-size: 5.2rem;
   font-weight: var(--fw-extra-bold);
   line-height: 1;
+  color: var(--clr-very-dark-blue);
 }
 
 .hero-main__content-info {
@@ -135,8 +148,12 @@ a {
   color: var(--clr-off-white);
   text-transform: uppercase;
   font-size: var(--fs-14);
-  font-weight: var(--fw-regular);
+  font-weight: var(--fw-bold);
   letter-spacing: 5px;
+}
+
+.cta:hover {
+  background-color: var(--clr-very-dark-blue);
 }
 
 .side-bar {
@@ -152,6 +169,7 @@ a {
 
 .side-bar h2 {
   font-size: 3.6rem;
+  color: var(--clr-soft-orange);
 }
 
 .article-card {
@@ -164,13 +182,22 @@ a {
   padding-bottom: 0;
 }
 
-.article-card h4 {
+.article-card .title:link,
+.article-card .title:visited {
   font-size: 1.8rem;
+  font-weight: var(--fw-extra-bold);
   margin-bottom: 1.2rem;
   line-height: 1.2;
+  color: var(--clr-off-white);
+  cursor: pointer;
 }
 
-.article-card p {
+.article-card .title:hover,
+.article-card .title:active {
+  color: var(--clr-soft-orange);
+}
+
+.article-card .content {
   font-size: 1.4rem;
   color: var(--clr-grayish-blue);
   line-height: 1.6;
@@ -211,10 +238,17 @@ a {
   margin-bottom: 0.8rem;
 }
 
-.flex-group .title {
+.flex-group .title:link,
+.flex-group .title:visited {
   font-size: var(--fs-16);
   font-weight: var(--fw-extra-bold);
+  color: var(--clr-very-dark-blue);
   margin-bottom: 0.8rem;
+}
+
+.flex-group .title:hover,
+.flex-group .title:active {
+  color: var(--clr-soft-red);
 }
 
 .flex-group .content {
